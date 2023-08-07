@@ -1,3 +1,4 @@
+import { yellow } from '@mui/material/colors';
 import { createTheme } from '@mui/material/styles';
 import { Roboto } from 'next/font/google';
 
@@ -10,6 +11,9 @@ const roboto = Roboto({
 const theme = createTheme({
   palette: {
     mode: 'light',
+    background: {
+      default: yellow[50],
+    }
 
   },
   typography: {
