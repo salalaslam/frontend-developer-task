@@ -1,6 +1,6 @@
 import { TodosList } from "@/components/TodosList";
 import { Box, Card, CardContent, CardHeader, Grid } from "@mui/material";
-import { AddTask } from "../components/AddTask";
+import { AddTodo } from "../components/AddTask";
 
 export default function HomePage() {
   return (
@@ -21,7 +21,7 @@ export default function HomePage() {
             }}
           >
             <CardHeader
-              title="Pending Tasks"
+              title="Pending Todos"
               sx={{
                 ".MuiCardHeader-title": {
                   fontWeight: "500",
@@ -34,7 +34,7 @@ export default function HomePage() {
           </Card>
         </Grid>
       </Grid>
-      <AddTask />
+      <AddTodo />
     </Box>
   );
 }

@@ -13,14 +13,14 @@ import {
 import { lightBlue, purple } from "@mui/material/colors";
 import React from "react";
 
-export const AddTask = () => {
+export const AddTodo = () => {
   const [open, setOpen] = React.useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const values = new FormData(e.currentTarget);
-    const task = values.get("task");
-    if (typeof task === "string" && task.length > 0) {
-      console.log("task", task);
+    const todo = values.get("todo");
+    if (typeof todo === "string" && todo.length > 0) {
+      console.log("todo", todo);
     }
     setOpen(false);
   };
@@ -58,7 +58,7 @@ export const AddTask = () => {
           },
         }}
       >
-        <DialogTitle>Add a new task</DialogTitle>
+        <DialogTitle>Add a new todo</DialogTitle>
         <DialogContent>
           <Box
             component="form"
@@ -70,8 +70,9 @@ export const AddTask = () => {
           >
             <TextField
               type="text"
+              name="todo"
               variant="standard"
-              placeholder="Task"
+              placeholder="Todo"
               fullWidth
             />
             <Button

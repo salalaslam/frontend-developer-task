@@ -34,7 +34,7 @@ export default function RootLayout({
           >
             <Toolbar>
               <Typography variant="h6" noWrap component="div">
-                {0} pending tasks
+                {0} pending todos
               </Typography>
             </Toolbar>
           </AppBar>
