@@ -1,18 +1,5 @@
-import {
-  Check,
-  DeleteOutlined as DeleteOutlinedIcon,
-} from "@mui/icons-material";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  Grid,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-} from "@mui/material";
-import Box from "@mui/material/Box";
+import { TodosList } from "@/components/TodosList";
+import { Box, Card, CardContent, CardHeader, Grid } from "@mui/material";
 import { AddTask } from "../components/AddTask";
 
 export default function HomePage() {
@@ -42,28 +29,7 @@ export default function HomePage() {
               }}
             />
             <CardContent>
-              <List>
-                <ListItem
-                  secondaryAction={
-                    <Box>
-                      <DeleteOutlinedIcon />
-                    </Box>
-                  }
-                >
-                  <ListItemIcon>
-                    <Check
-                      sx={{
-                        bgcolor: "background.default",
-                        border: "3px solid #000",
-                        borderRadius: 1,
-                        color: "#000",
-                        boxShadow: "4px 4px 0 0 #000",
-                      }}
-                    />
-                  </ListItemIcon>
-                  <ListItemText primary="Task 1" />
-                </ListItem>
-              </List>
+              <TodosList />
             </CardContent>
           </Card>
         </Grid>
